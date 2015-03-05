@@ -1,1 +1,1 @@
-web: gunicorn sharex.wsgi
+web: gunicorn thesite.wsgi
