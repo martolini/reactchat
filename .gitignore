@@ -1,6 +1,7 @@
-db.sqlite3
+node_modules
+package.json
 venv
 *.pyc
+static
 .DS_Store
-static/node_modules/
-static/package.json
+db.sqlite3
