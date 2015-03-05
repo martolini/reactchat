@@ -1,0 +1,59 @@
+body, html {
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.message-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	height: 90%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.message-list li {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px dotted #B3A9A9;
+}
+
+.message-list li div .col-sm-1 {
+	padding-right: 0;
+	margin-right: 0;
+}
+
+.message-list li div .col-sm-11 {
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.message-list li div p {
+	margin: 0 0 0 0;
+}
+
+.message-time {
+	padding-left: 10px;
+}
+
+.message-section {
+	height: 100%;
+}
+
+.message-composer {
+	padding-top: 5px;
+	width: 100%;
+}
+
+.message-input {
+	resize: none;
+}
+
+.message-list-item .message-img {
+	position: relative;
+	padding-right: 10px;
+}
+
+.message-body {
+
+}
