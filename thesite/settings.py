@@ -90,7 +90,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-STATIC_ROOT = 'static'
+STATIC_ROOT = 'staticfiles'
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'thesite/templates'),)
 
