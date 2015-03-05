@@ -16,9 +16,9 @@ class Command(BaseCommand):
 			'debug': settings.DEBUG
 		}
 
-		port = 3456
+		port = 8888
 		app = web.Application(router.urls, **app_settings)
-		app.listen(port, address="dokku.msroed.net", no_keep_alive=True)
+		app.listen(port, no_keep_alive=True)
 		print 'Running tornado on port %d with channel %s' % (port, channel)
 		try:
 			ioloop.IOLoop.instance().start()
