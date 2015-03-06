@@ -23,3 +23,7 @@ class ChannelAdmin(admin.ModelAdmin):
 @admin.register(Message)
 class MessageAdmin(admin.ModelAdmin):
 	list_display = ('id', 'user')
+
+@admin.register(Membership)
+class MembershipAdmin(admin.ModelAdmin):
+	list_display = ('id', 'user', 'channel')

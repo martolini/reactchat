@@ -15,7 +15,6 @@ var MessageList = React.createClass({
 
 	componentDidUpdate: function() {
 		var node = this.getDOMNode();
-		console.log(node.scrollTop, node.scrollHeight);
 		node.scrollTop = node.scrollHeight;
 	},
 

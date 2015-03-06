@@ -27,7 +27,7 @@ var ChannelList = React.createClass({
 		var channels = this.state.channels.map(function(channel, index) {
 			var className = 'channel';
 			if (channel.id == this.state.currentChannelID) {
-				className += ' active';
+				className += ' channel-active';
 			}
 			return (
 				<li className={className} onClick={ this.onCurrentChannelChange.bind(this, channel.id) } key={channel.id}>
