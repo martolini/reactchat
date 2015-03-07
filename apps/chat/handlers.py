@@ -3,7 +3,7 @@ from django.utils.importlib import import_module
 from django.conf import settings
 from django.contrib.auth import get_user, get_user_model
 import json
-from .models import Message, Profile
+from .models import Message
 
 engine = import_module(settings.SESSION_ENGINE)
 session_cookie_name = settings.SESSION_COOKIE_NAME

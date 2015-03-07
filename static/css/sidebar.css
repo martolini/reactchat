@@ -26,7 +26,8 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #2c3e50;
+    background: #4D394B;
+    -webkit-font-smoothing: grayscale;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -62,14 +63,23 @@
 }
 
 .sidebar-nav li {
+    font-size: 1rem;
     text-indent: 20px;
-    line-height: 20px;
+    line-height: 1.5rem;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.25);
 }
 
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: #ab9ba9;
+}
+
+.sidebar-nav li a .prefix {
+    color:#ab9ba9;
+    font-weight:300;
+    opacity:0.5;
+    padding-right: 2px;
 }
 
 .sidebar-nav li a i {
@@ -78,12 +88,13 @@
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #18bc9c;
-    background: rgba(255,255,255,0.2);
+/*    color: #636363;
+*/    background: rgba(255,255,255,0.2);
 }
 
-.sidebar-nav li.channel-active {
-    background: #18bc9c;
+.sidebar-nav li.channel-active a {
+    color: white;
+    background: #4c9689;
 }
 
 .sidebar-nav li a:active,

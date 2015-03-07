@@ -31,7 +31,10 @@ var ChannelList = React.createClass({
 			}
 			return (
 				<li className={className} onClick={ this.onCurrentChannelChange.bind(this, channel.id) } key={channel.id}>
-					<a>#{channel.name}</a>
+					<a>
+						<span className="prefix">#</span>
+						{channel.name}
+					</a>
 				</li>
 			);
 		}, this);

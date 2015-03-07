@@ -31,16 +31,25 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
-INSTALLED_APPS = (
+DJANGO_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'thesite.chat',
-    'storages'
 )
+
+EXTERNAL_APPS = (
+    'storages',
+)
+
+PROJECT_APPS = (
+    'apps.chat',
+    'apps.profiles',
+)
+
+INSTALLED_APPS = DJANGO_APPS + EXTERNAL_APPS + PROJECT_APPS
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -52,9 +61,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'thesite.urls'
+ROOT_URLCONF = 'sharexio.urls'
 
-WSGI_APPLICATION = 'thesite.wsgi.application'
+WSGI_APPLICATION = 'sharexio.wsgi.application'
 
 
 # Database
@@ -73,7 +82,7 @@ DATABASES = {
 }
 
 
-AUTH_USER_MODEL = 'chat.Profile'
+AUTH_USER_MODEL = 'profiles.Profile'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -90,7 +99,7 @@ USE_TZ = True
 
 # SOCKJS
 
-SOCKJS_HANDLER = 'thesite.chat.handlers.ChatHandler'
+SOCKJS_HANDLER = 'apps.chat.handlers.ChatHandler'
 SOCKJS_CHANNEL = '/chat'
 
 
@@ -103,7 +112,7 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = 'staticfiles'
 
-TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'thesite/templates'),)
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'sharexio/templates'),)
 
 #AWS
 AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
